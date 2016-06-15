@@ -10,18 +10,19 @@ class m160615_144510_create_table_Production extends Migration
     /**
      * @inheritdoc
      */
-    public function up()
+    public function safeUp()
     {
-        $this->createTable('table_production', [
-            'id' => $this->primaryKey(),
+        $this->createTable('Production', [
+            'idProduction' => $this->primaryKey(),
+            'Status'=>$this->string(15)->notNull(),
         ]);
     }
 
     /**
      * @inheritdoc
      */
-    public function down()
+    public function safeDown()
     {
-        $this->dropTable('table_production');
+        $this->dropTable('Production');
     }
 }

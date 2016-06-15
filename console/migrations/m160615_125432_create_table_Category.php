@@ -15,7 +15,7 @@ class m160615_125432_create_table_Category extends Migration
     {
         $this->createTable('Category', [
             'idCategory' => Schema::TYPE_PK,
-            'Category' => Schema::TYPE_CHAR
+            'Category' => $this->string(9)->notNull(),
         ]);
     }
 
